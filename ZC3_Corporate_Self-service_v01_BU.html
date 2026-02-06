@@ -4,8 +4,6 @@
 
 
 <head>
-
-
   <meta name="ZC3 2026 - Company Self-service" content="ZC3 2026 - Company Self-service" />
   <meta charset="utf-8">
   <title>ZC3 2026 - Company Self-service</title>
@@ -14,24 +12,15 @@
   <meta name="author" content="">
   <link rel="stylesheet" href="css/style.css">
   <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script>
-  const params = new URLSearchParams(window.location.search);
-  const langchoosen = params.get("lang") === "de" ? "de" : "en";
-  
-  const s = document.createElement("script");
-  s.src = `https://events2.raceresult.com/registrations/init.js?lang=${langchoosen}`;
-  
-  // Optional: callback when loaded
-  s.onload = () => {
-    console.log("Script loaded!");
-  };
-  
-  document.head.appendChild(s);
-</script>
 </head>
 
 <body>
   
+<div class="container">
+  
+</div>
+
+
 
 <script type="text/javascript">
 <!--
@@ -41,16 +30,17 @@
   var RRReg_server="https://events2.raceresult.com";
 -->
 </script>
-<div class="container">
-  
-</div>
-
-
-
-
 <!-- <script type="text/javascript" src="https://events2.raceresult.com/registrations/init.js?lang=en"></script> -->
 
-
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const langchoosen = params.get("lang") === "de" ? "de" : "en";
+    
+    const s = document.createElement("script");
+    s.type = "text/javascript";
+    s.src = `https://events2.raceresult.com/registrations/init.js?lang=${langchoosen}`;
+    document.body.appendChild(s);
+  </script>
 
 
 <script>
