@@ -21,6 +21,25 @@
 </div>
 
 
+<script>
+  // URL-Parameter auslesen
+  const params = new URLSearchParams(window.location.search);
+  const lang = params.get("lang");
+
+  // Sprache bestimmen
+  let langchoosen = "en"; // Standard
+  if (lang === "de") {
+    langchoosen = "de";
+  }
+
+  // Script dynamisch laden
+  const s = document.createElement("script");
+  s.type = "text/javascript";
+  s.src = "https://events2.raceresult.com/registrations/init.js?lang=" + langchoosen;
+  document.head.appendChild(s);
+</script>  
+
+
 
 <script type="text/javascript">
 <!--
@@ -30,7 +49,7 @@
   var RRReg_server="https://events2.raceresult.com";
 -->
 </script>
-<script type="text/javascript" src="https://events2.raceresult.com/registrations/init.js?lang=en"></script>
+<!-- <script type="text/javascript" src="https://events2.raceresult.com/registrations/init.js?lang=en"></script> -->
 
 
 
